@@ -122,6 +122,9 @@
   <div class="note">Your birth date is used once, locally on your device, to calculate whether you're under 13. The birth date itself is never saved anywhere — only the result of that calculation (a true/false flag) is stored locally on your device, together with a flag noting that the screen has been completed. Returning players aren't asked again. If this check can't be completed for any reason, the App defaults to treating the session as a child's for ad purposes — it never assumes you're older than 13 by default.</div>
   <p>This flag determines which ad experience you see, as described in Section 4 (Children's Privacy). No ads of any kind are requested or shown until this screen has been completed.</p>
 
+  <h3>Consent for Advertising (EEA, UK, Switzerland and certain US states)</h3>
+  <p>Where the law requires it, the App shows Google's consent message (Google User Messaging Platform) after the age screen and before any ads are requested. There you can accept, reject, or manage how our ad partners may use your data. You can change your choices at any time with the <strong>Privacy</strong> button in the App's Settings; this button is shown wherever such a choice is legally required.</p>
+
   <h3>Advertising &amp; Diagnostic Data</h3>
   <p>The App displays ads through Google AdMob mediation. For each ad, AdMob runs a real-time auction (bidding) among the following ad networks:</p>
   <ul>
@@ -133,7 +136,6 @@
     <li>DT Exchange (Digital Turbine)</li>
     <li>Mintegral — only for players 13 and over; it never receives ad requests from child sessions (see Section 4)</li>
   </ul>
-  <p>Where the law requires it (for example in the EEA and UK), players 13 and over are shown a consent message before personalized ads are requested. You can change your choices at any time with the Privacy button in the App's Settings.</p>
   <p>To serve and measure ads, and to keep the App stable, these SDKs automatically collect the data described below:</p>
   <table>
     <tr>
@@ -182,7 +184,8 @@
   <p>This data is collected and processed by our ad partners according to their own privacy policies, not by us directly. You can review their practices here:</p>
   <ul>
     <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></li>
-    <li>Unity Ads and ironSource Ads — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">unity.com/legal/game-player-and-app-user-privacy-policy</a></li>
+    <li>Unity Ads — <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">unity.com/legal/game-player-and-app-user-privacy-policy</a></li>
+    <li>ironSource Ads (Unity) — <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">unity.com/legal/privacy-policy</a></li>
     <li>InMobi — <a href="https://advertising.inmobi.com/privacy-policy" target="_blank" rel="noopener">advertising.inmobi.com/privacy-policy</a></li>
     <li>Liftoff Monetize — <a href="https://liftoff.ai/privacy-policy" target="_blank" rel="noopener">liftoff.ai/privacy-policy</a></li>
     <li>DT Exchange (Digital Turbine) — <a href="https://www.digitalturbine.com/legal/privacy-policy" target="_blank" rel="noopener">digitalturbine.com/legal/privacy-policy</a></li>
@@ -227,11 +230,11 @@
   <h2>4. Children's Privacy</h2>
   <p>Shiba no Tsuri has a mixed audience: it's designed to be enjoyed by both children under 13 and older players. Because of this, the App uses a neutral age screen (described in Section 1) to determine which ad experience applies to each player, in line with Google Play's Families policy and the US Children's Online Privacy Protection Act (COPPA).</p>
   <ul>
-    <li><strong>If you're under 13</strong> (or if age couldn't be determined): the App tags every ad request as child-directed and limits ads to content rated for general audiences (G). This disables personalized advertising, remarketing, and interest-based ads, and prevents your device's advertising ID from being used for advertising. This signal is set through the Google Mobile Ads SDK (AdMob), which passes it to every mediated ad network. Child sessions only use ad units whose auctions include Google Play Families Self-Certified ad networks; Mintegral, which is not self-certified, never receives ad requests from child sessions.</li>
+    <li><strong>If you're under 13</strong> (or if age couldn't be determined): the App tags every ad request as child-directed and limits ads to content rated for general audiences (G). This disables personalized advertising, remarketing, and interest-based ads, and prevents your device's advertising ID from being used for advertising. This signal is set through the Google Mobile Ads SDK (AdMob), which passes it to every mediated ad network. Child sessions only use ad units whose auctions include Google Play Families Self-Certified ad networks (Google AdMob, Unity Ads, ironSource, InMobi, Liftoff Monetize and DT Exchange); Mintegral, which is not self-certified, never receives ad requests from child sessions.</li>
     <li><strong>If you're 13 or over</strong>: standard (non-child-directed) ads may be shown, as described in Section 1.</li>
   </ul>
   <p>Rewarded ads are always optional: they only play when you tap a button that offers a reward, and skipping one simply means no reward.</p>
-  <p>We do not knowingly collect personal information from children under 13 beyond the minimal, non-identifying data described in Section 1 (device/advertising identifiers are never collected for child sessions; diagnostic and crash data is not personal or directly identifying). If you are a parent or guardian and believe your child has provided us with personal information beyond what's described here, please contact us using the details in Section 10 and we will address it.</p>
+  <p>We do not knowingly collect personal information from children under 13 beyond the minimal, non-identifying data described in Section 1 (device/advertising identifiers are never collected for child sessions; diagnostic and crash data is not personal or directly identifying). In-app purchases always go through Google Play, where parents can require authentication for every purchase. If you are a parent or guardian and believe your child has provided us with personal information beyond what's described here, please contact us using the details in Section 10 and we will address it.</p>
 
   <h2>5. Data Retention</h2>
   <p>We do not maintain a personal user data profile on our own servers — account-linked data (Play Games profile and cloud save) lives on Google's infrastructure, as described in Section 2, and purchase records live with Google Play Billing. The only data related to the age screen that's ever stored is two true/false flags saved locally on your device (whether the screen was completed, and whether the session is treated as a child's); your actual birth date is discarded immediately after that calculation and is never transmitted anywhere. Your advertising consent choices (where applicable) are also stored locally on your device. Advertising identifiers, app interaction data, and diagnostic data are retained by our ad partners listed in Section 1 according to their own retention policies. Local data stored on your device, including the age-screen flags and consent choices, can be cleared at any time by uninstalling the App or clearing the App's data via your device settings — doing so will show the age screen again on next launch.</p>
